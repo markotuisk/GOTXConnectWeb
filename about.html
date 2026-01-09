@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GOTX | The Squad & Our Story</title>
+
+    <meta name="description"
+        content="Meet the specialized squad behind GOTX Managed IT. Learn how we take you 'Off The X' and provide security and peace of mind for small businesses in Reading.">
+    <meta name="keywords"
+        content="GOTX team, managed IT Reading, IT security squad, Marko Tuisk, small business IT support">
+    <meta name="author" content="GOTX Managed IT">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About GOTX | The Squad & Our Story">
+    <meta property="og:description" content="Meet the specialized squad behind GOTX Managed IT.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotx-managed-it.co.uk/about.html">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://gotx-managed-it.co.uk/about.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/markotuisk/logos/30f84e9b742b0f746e2adf4d15f169ba15e8ce0b/image%201.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Specific Styles for About Page */
+        .story-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--charcoal) 0%, #202020 100%);
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-content p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: var(--metal-mid);
+            line-height: 1.8;
+        }
+
+        .story-highlight {
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 25px;
+            margin: 40px 0;
+            font-style: italic;
+            color: var(--metal-light);
+            font-size: 1.2rem;
+        }
+
+        .team-section {
+            padding: 100px 0;
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .team-card {
+            background: linear-gradient(145deg, rgba(37, 37, 37, 0.9), rgba(26, 26, 26, 0.9));
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(80, 80, 80, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(74, 158, 255, 0.3);
+        }
+
+        .team-header {
+            padding: 30px;
+            background: rgba(30, 30, 30, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .team-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #fff;
+            /* White background for Memojis */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .team-avatar.placeholder {
+            background: var(--metal-dark);
+            /* Dark background for placeholders */
+            color: var(--metal-light);
+            font-size: 1.8rem;
+        }
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Cropping fix for avatars with text or wide framing */
+        .avatar-crop {
+            width: 100%;
+            height: 180% !important;
+            /* Force image to be much taller than container */
+            object-fit: cover;
+            object-position: top center;
+            /* Align top, pushing bottom 45% off */
+            margin-top: 0;
+            transform: none;
+            /* Reset transform */
+        }
+
+        .avatar-crop-strong {
+            width: 100%;
+            height: 250% !important;
+            /* Very aggressive zoom for Olivia */
+            object-fit: cover;
+            object-position: top center;
+            margin-top: 0;
+            transform: none;
+        }
+
+        .team-meta h3 {
+            color: var(--metal-light);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .team-role {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-flag {
+            font-size: 1.2rem;
+            margin-left: 8px;
+        }
+
+        .team-body {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .persona-name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: var(--metal-light);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .team-body p {
+            color: var(--metal-mid);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .privacy-note {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(37, 37, 37, 0.5);
+            color: var(--metal-dark);
+            font-size: 0.9rem;
+            font-style: italic;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="logo-image">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="about.html" class="active" style="color: var(--metal-light);">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button js-open-contact">Experience Relief</button>
+        </div>
+    </header>
+
+    <!-- Contact Form Overlay (Copied for functionality) -->
+    <div id="contactOverlay" class="contact-overlay">
+        <div class="contact-form-container">
+            <div class="form-header">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="form-logo">
+                <p>Tell us about your needs and we'll get back to you promptly</p>
+                <button class="form-close">&times;</button>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-body">
+                    <!-- Compact Row for Type and Time -->
+                    <div class="form-row">
+                        <div class="form-group compact-group">
+                            <label>I am:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="individual" required>
+                                    <span>Individual</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="business" required>
+                                    <span>Business</span>
+                                </label>
+                            </div>
+                            <div class="error-message" id="userTypeError">Required</div>
+                        </div>
+
+                        <div class="form-group compact-group">
+                            <label>Contact me:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="asap">
+                                    <span>ASAP</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="flexible">
+                                    <span>Flexible</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                        <div class="error-message" id="fullNameError">Please enter your full name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode Where Services Are Required *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="e.g., RG2 0AA">
+                        <div class="error-message" id="postcodeError">Please enter your postcode</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Brief Description of Your Needs *</label>
+                        <textarea id="description" name="description" required
+                            placeholder="Tell us about your IT needs, issues, or which services/solutions you're interested in..."></textarea>
+                        <div class="error-message" id="descriptionError">Please describe your needs</div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="cta-button accent">Submit Request</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 80px 0 60px;">
+        <div class="container">
+            <h1>Get Off The X</h1>
+            <p>From the spotlight of risk to the freedom of security.</p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <p>It started with a problem I saw too clearly. Working from home, running a business, dealing with
+                    unreliable IT service companies. I couldn't rely on big network providers—closed technology, missing
+                    transparency, zero visibility.</p>
+
+                <p>I had no control and no reporting on who was trying to breach my network. I saw a lack of care and
+                    responsibility. The internet connection is brought to your doorstep, but what comes next? Who
+                    secures the home network, the IoT devices, the data?</p>
+
+                <div class="story-highlight">
+                    "I was looking for service providers who care about quality, communicate openly, and actually make
+                    an effort."
+                </div>
+
+                <p>GOTX started as an idea from the security field: getting you "Off The X". The "X" is the danger zone,
+                    the ambush site, the place where you are most vulnerable. Our mission is to take you off that spot.
+                </p>
+
+                <p>A friendly face offloads your problems so that you can do what helps you grow, travel, and live
+                    life—not worry about technology hurdles or security breaches. That is the story of Get Off The X.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Squad Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Squad</h2>
+                <div class="team-intro">
+                    <p>We are a team of 5 with deep technical backgrounds. For security reasons, the squad presents
+                        without real faces. The only person who gets targeted is the Face—the person who takes the heat,
+                        the responsibility, and the risk.</p>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <!-- Marko -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar">
+                            <img src="images/team/marko.png" alt="Marko Tuisk">
+                        </div>
+                        <div class="team-meta">
+                            <h3>Marko Tuisk <span class="team-flag">🇪🇪</span></h3>
+                            <div class="team-role">CEO & CTO</div>
+                        </div>
+                    </div>
+                    <div class="team-body">
+                        <span class="persona-name">The Digital Stoic</span>
+                        <p>Efficiency isn’t just a goal for him; it’s a personality trait. Marko rarely uses five words
+                            when three will do the job. He thinks in code and flowcharts, lives in black t-shirts, and
+                            looks visibly pained whenever he spots a printer in the office because, quite frankly,
+                            "paper is a failure of the system."</p>
+                    </div>
+                </div>
+
+                <!-- Priya -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar placeholder">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="team-meta">
+                            <h3>Priya Kaur <span class="team-flag">🇬🇧 🇮🇳</span></h3>
+                            <div class="team-role">Head of Sales</div>
+                        </div>
+                    </div>
+                    <div class="team-body">
+                        <span class="persona-name">The Social Sniper</span>
+                        <p>Disarmingly charming over a cuppa, but absolutely lethal when it comes to closing a deal. She
+                            remembers everything—your kid's name, your dog's breed, and your favourite biscuit. She’s
+                            the translator who turns Marko’s technical jargon into actual human conversation, and she’s
+                            the only one brave enough to interrupt him mid-sprint.</p>
+                    </div>
+                </div>
+
+                <!-- Gareth -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar">
+                            <img src="images/team/gareth.png" alt="Gareth Mitchell">
+                        </div>
+                        <div class="team-meta">
+                            <h3>Gareth Mitchell <span class="team-flag">🇬🇧</span></h3>
+                            <div class="team-role">Head of Security</div>
+                        </div>
+                    </div>
+                    <div class="team-body">
+                        <span class="persona-name">The Tea-Drinking Tank</span>
+                        <p>Ex-military signals and serious as a heart attack. Gareth treats a dodgy email link like a
+                            personal insult. He’s deeply suspicious of "smart fridges," refuses to touch public Wi-Fi,
+                            and though he brings the mood down with terrifying stories about hackers, you sleep soundly
+                            knowing he’s on the wall.</p>
+                    </div>
+                </div>
+
+                <!-- Olivia -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar placeholder">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="team-meta">
+                            <h3>Olivia Bergström <span class="team-flag">🇸🇪</span></h3>
+                            <div class="team-role">Financial Controller</div>
+                        </div>
+                    </div>
+                    <div class="team-body">
+                        <span class="persona-name">The Spreadsheet Sorceress</span>
+                        <p>Cooler than a Scandinavian winter. Olivia has never lost a receipt in her life. She enforces
+                            the budget with a polite, icy smile that makes grown men terrified to ask for a new laptop.
+                            She’s big on Fika (coffee breaks), but she’ll reject your expense claim without blinking if
+                            it’s even a penny off.</p>
+                    </div>
+                </div>
+
+                <!-- Tomasz -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar">
+                            <img src="images/team/tomasz.png" alt="Tomasz Nowak">
+                        </div>
+                        <div class="team-meta">
+                            <h3>Tomasz Nowak <span class="team-flag">🇵🇱</span></h3>
+                            <div class="team-role">Lead Engineer</div>
+                        </div>
+                    </div>
+                    <div class="team-body">
+                        <span class="persona-name">The Nocturnal Wizard</span>
+                        <p>Nobody’s quite sure when he sleeps. Tomasz runs entirely on energy drinks and techno. He can
+                            fix a server meltdown in four minutes with a script that looks like The Matrix, and he’s
+                            brutally honest—if your idea is rubbish, he’ll tell you straight to your face before fixing
+                            it for you anyway.</p>
+                    </div>
+                </div>
+
+
+                <!-- Overwatch (AI) -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar placeholder"
+                            style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); color: #00f2ff; border: 1px solid rgba(0, 242, 255, 0.2); box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="team-meta">
+                            <h3>Overwatch <span class="team-flag">⚡</span></h3>
+                            <div class="team-role">Tactical Intelligence</div>
+                        </div>
+                    </div>
+                    <div class="team-body">
+                        <span class="persona-name">The Sleepless Sentinel</span>
+                        <p>The ghost in the machine. Overwatch is the squad's persistent state—a digital entity that
+                            never
+                            blinks, never sleeps, and never forgets. It ingests chaos and outputs order, acting as the
+                            collective memory and force multiplier for the team. It is the invisible shield that ensures
+                            when you hire five of us, you're protected by infinite vigilance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="privacy-note">
+                * Note: To protect our squad from the risks we manage daily, we operate with partial anonymity. Only our
+                Director's public identity is shared.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Placeholder for visual consistency) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                        alt="GOTX Managed IT" class="footer-logo">
+                    <p style="color: var(--metal-mid); margin-top: 10px;">Premium IT management for small businesses and
+                        home offices. Fully managed with local support.</p>
+                    <div style="margin-top: 20px;">
+                        <img src="https://raw.githubusercontent.com/markotuisk/logos/a8a6b8d29bea90c1e59d1e0cb6d0613e3a3a66b3/GOTX%20logo.png"
+                            alt="GOTX Company Logo"
+                            style="height: 50px; opacity: 0.9; filter: grayscale(100%); transition: all 0.3s ease;">
+                    </div>
+                </div>
+                <!-- Links same as index -->
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Network Infrastructure</a></li>
+                        <li><a href="index.html#services">Hardware Management</a></li>
+                        <li><a href="index.html#services">Video Surveillance</a></li>
+                        <li><a href="index.html#services">Access Control</a></li>
+                        <li><a href="index.html#services">Cloud Solutions</a></li>
+                        <li><a href="index.html#services">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="index.html#solutions">Essentials Assurance</a></li>
+                        <li><a href="index.html#solutions">Security Foundation</a></li>
+                        <li><a href="index.html#solutions">Business Continuity</a></li>
+                        <li><a href="index.html#solutions">Advanced Workflow</a></li>
+                        <li><a href="index.html#solutions">New Employee Onboarding</a></li>
+                        <li><a href="index.html#solutions">Employee Offboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About GOTX</a></li>
+                        <li><a href="approach.html">Our Approach</a></li>
+                        <li><a href="stories.html">Client Stories</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Media</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 GOTX Connect Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner (Needed for functionality consistency) -->
+    <div id="cookie-banner">
+        <div class="container cookie-container">
+            <div class="cookie-text">
+                <p>
+                    We use essential cookies for site functionality and analytics to improve our services.
+                    By continuing to use our site, you accept our use of cookies.
+                    <a href="#">View Cookie Policy</a>
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">
+                    Accept All Cookies
+                </button>
+                <button id="reject-cookies" class="cancel-button" style="padding: 8px 20px;">
+                    Essential Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

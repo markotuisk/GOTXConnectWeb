@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOTX | Managed IT for Small Businesses & Home Offices</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="GOTX provides fully managed IT services for small businesses & home offices in Reading RG2. Proactive monitoring, security, and local IT support.">
+    <meta name="keywords"
+        content="managed IT services, small business IT support, Reading IT services, home office IT, network infrastructure, IT security, CCTV installation">
+    <meta name="author" content="GOTX Managed IT">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GOTX | Managed IT for Small Businesses & Home Offices">
+    <meta property="og:description" content="Premium IT management with local support in Reading RG2 area.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotx-managed-it.co.uk">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://gotx-managed-it.co.uk/">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ITService",
+        "name": "GOTX Managed IT",
+        "legalName": "GOTX Connect Ltd",
+        "description": "Managed IT services for small businesses and home offices in Reading and Berkshire",
+        "url": "https://gotx-managed-it.co.uk",
+        "logo": "https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png",
+        "image": "https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png",
+        "telephone": "",
+        "email": "info@gotx.uk",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Reading",
+            "postalCode": "RG2",
+            "addressRegion": "Berkshire",
+            "addressCountry": "UK"
+        },
+        "areaServed": ["Berkshire", "Hampshire", "Oxfordshire", "Reading", "Thames Valley"],
+        "serviceType": ["IT Support", "Network Infrastructure", "Security Systems", "Cloud Solutions", "Business Continuity"],
+        "priceRange": "££",
+        "knowsAbout": ["Cybersecurity", "Managed IT Services", "Network Design", "Data Recovery", "Cloud Migration"],
+        "sameAs": [
+            "https://www.linkedin.com/company/gotx-connect"
+        ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/markotuisk/logos/30f84e9b742b0f746e2adf4d15f169ba15e8ce0b/image%201.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT - Professional IT Services in Reading" class="logo-image">
+                <!-- REMOVED: <span class="logo-subtext">Managed IT</span> -->
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact" class="js-open-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button js-open-contact">Experience Relief</button>
+        </div>
+    </header>
+
+    <!-- Contact Form Overlay -->
+    <div id="contactOverlay" class="contact-overlay">
+        <div class="contact-form-container">
+            <div class="form-header">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="form-logo">
+                <p>Tell us about your needs and we'll get back to you promptly</p>
+                <button class="form-close">&times;</button>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-body">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                        <div class="error-message" id="fullNameError">Please enter your full name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode Where Services Are Required *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="e.g., RG2 0AA">
+                        <div class="error-message" id="postcodeError">Please enter your postcode</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Brief Description of Your Needs *</label>
+                        <textarea id="description" name="description" required
+                            placeholder="Tell us about your IT needs, issues, or which services/solutions you're interested in..."></textarea>
+                        <div class="error-message" id="descriptionError">Please describe your needs</div>
+                    </div>
+
+                    <!-- Compact Row for Type and Time -->
+                    <div class="form-row">
+                        <div class="form-group compact-group">
+                            <label>I am:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="individual" required>
+                                    <span>Individual</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="business" required>
+                                    <span>Business</span>
+                                </label>
+                            </div>
+                            <div class="error-message" id="userTypeError">Required</div>
+                        </div>
+
+                        <div class="form-group compact-group">
+                            <label>Contact me:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="asap">
+                                    <span>ASAP</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="flexible">
+                                    <span>Flexible</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="cta-button accent">Submit Request</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Verification Modal -->
+    <div id="verificationOverlay" class="contact-overlay" style="z-index: 2000;">
+        <div class="contact-form-container"
+            style="max-width: 550px; text-align: center; border: 1px solid var(--accent-blue); background: rgba(18, 18, 18, 0.95); box-shadow: 0 10px 40px rgba(0,0,0,0.8);">
+            <!-- Header -->
+            <div class="form-header"
+                style="flex-direction: column; gap: 5px; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 25px;">
+                <h2 style="color: var(--metal-light); font-size: 1.6rem; letter-spacing: 0.5px; margin: 0;">Contact
+                    Verification</h2>
+                <div style="font-family: monospace; color: var(--accent-blue); font-size: 1rem; opacity: 0.8;">
+                    REF ID: <span id="verifyTaskId">LOADING...</span>
+                </div>
+            </div>
+
+            <div class="form-body" style="text-align: center; padding: 30px 40px;">
+
+                <!-- SLA Box -->
+                <div
+                    style="background: rgba(30, 30, 30, 0.5); border-left: 3px solid var(--accent-blue); padding: 15px; margin-bottom: 30px; text-align: left;">
+                    <strong
+                        style="color: var(--accent-blue); display: block; margin-bottom: 5px; font-size: 0.8rem; text-transform: uppercase;">Expected
+                        Response</strong>
+                    <p id="verifySLA"
+                        style="color: var(--metal-light); margin: 0; font-size: 0.95rem; line-height: 1.5;">
+                        Calculating...</p>
+                </div>
+
+                <!-- Main Message -->
+                <p style="color: var(--metal-light); font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">
+                    We have sent an <strong>acknowledgment letter</strong> to your email inbox.<br>
+                    Can you confirm you received it?
+                </p>
+
+                <!-- Company Details (Small) -->
+                <div style="margin-bottom: 30px; color: var(--metal-mid); font-size: 0.9rem;">
+                    <i class="fas fa-envelope" style="margin-right: 5px; color: var(--accent-blue);"></i> info@gotx.uk
+                    &nbsp;|&nbsp;
+                    <i class="fas fa-phone" style="margin-right: 5px; color: var(--accent-blue);"></i> +44 (0) 743 99 88
+                    999
+                </div>
+
+                <!-- Buttons -->
+                <div class="verify-actions" style="display: flex; gap: 15px; justify-content: center;">
+                    <button id="btnVerifyYes" class="cta-button accent" style="min-width: 120px;">
+                        Yes
+                    </button>
+
+                    <button id="btnVerifyNo" class="cta-button"
+                        style="min-width: 120px; background: rgba(255,255,255,0.1);">
+                        No
+                    </button>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <button id="btnVerifySkip"
+                        style="background: none; border: none; color: var(--metal-mid); text-decoration: underline; cursor: pointer; font-size: 0.9rem;">
+                        Skip
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Fully Managed IT for Small Businesses & Home Offices</h1>
+            <p>Experience the relief of IT that just works. GOTX provides managed services that eliminate technology
+                stress through proactive monitoring, robust security, and local support that feels like having an expert
+                right next door. If you or your office resides within 60 minutes drive or train journey from Reading
+                RG2, consider our local expert onboarded. Other locations are available after contact.</p>
+            <button class="cta-button accent js-open-contact">Experience GOTX Relief</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Technical Services</h2>
+                <p>Our specialised technical capabilities. Choose individual services or bundle them into complete
+                    solutions.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Infrastructure & Design</h3>
+                    <p>End-to-end network solutions from custom architecture design to implementation, including
+                        failover systems, redundancy planning, and ongoing management for reliable connectivity.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Hardware & Device Management</h3>
+                    <p>Comprehensive hardware lifecycle management including procurement, configuration, maintenance,
+                        and optimisation of workstations, servers, and business peripherals.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Surveillance Systems</h3>
+                    <p>Professional CCTV system design, installation, and management including remote monitoring,
+                        recording solutions, and integration with existing security infrastructure.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Electronic Access Control</h3>
+                    <p>Advanced access control systems including card readers, biometric solutions, door controllers,
+                        and integrated security management for controlled business environments.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Secure cloud infrastructure setup, migration, and management for data storage, backup,
+                        collaboration tools, and remote access solutions tailored to small business needs.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>IoT Solutions</h3>
+                    <p>Smart device integration, automation system implementation, IoT network setup and security, and
+                        remote monitoring solutions for optimised business environments.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Power & Infrastructure Technology</h3>
+                    <p>Power management solutions including UPS systems, surge protection, backup power design, and
+                        energy efficiency optimisation for continuous business operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section - Q&A Format -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Complete Business Solutions</h2>
+                <p>Direct answers to your most pressing IT questions. Click on any question to see our comprehensive
+                    solution.</p>
+            </div>
+
+            <div class="qa-accordion">
+                <!-- Essentials Assurance -->
+                <div class="qa-item" data-solution="essentials">
+                    <div class="qa-question">
+                        <div class="qa-header">
+                            <h3>Are my basics covered? Will my devices work? Is support there when I need it?</h3>
+                        </div>
+                        <div class="qa-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="qa-answer">
+                        <div class="qa-content">
+                            <div class="qa-description">
+                                Get peace of mind with our foundational package. We ensure your core technology works
+                                reliably with proactive monitoring, basic security, and fast support response.
+                            </div>
+                            <div class="qa-inclusions">
+                                <h4>Core Inclusions</h4>
+                                <ul>
+                                    <li>Proactive device monitoring & maintenance</li>
+                                    <li>Basic endpoint security protection</li>
+                                    <li>Office network setup & security</li>
+                                    <li>Fast local & remote support response</li>
+                                    <li>Visibility dashboard for network activity</li>
+                                    <li>Regular audit trail documentation</li>
+                                    <li>Basic hardware troubleshooting</li>
+                                    <li>Software update management</li>
+                                    <li>Email & communication setup</li>
+                                    <li>Quarterly performance reviews</li>
+                                </ul>
+                            </div>
+                            <div class="qa-cta">
+                                <button class="cta-button accent js-open-contact">Get Essentials Assurance</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security & Compliance Foundation -->
+                <div class="qa-item" data-solution="security">
+                    <div class="qa-question">
+                        <div class="qa-header">
+                            <h3>Am I secure against threats? Do I meet compliance requirements? What about physical
+                                security?</h3>
+                        </div>
+                        <div class="qa-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="qa-answer">
+                        <div class="qa-content">
+                            <div class="qa-description">
+                                Protect your business with comprehensive security covering digital threats, compliance
+                                needs, and physical access control. Sleep better knowing you're protected.
+                            </div>
+                            <div class="qa-inclusions">
+                                <h4>Core Inclusions</h4>
+                                <ul>
+                                    <li>Advanced threat protection & monitoring</li>
+                                    <li>Industry compliance documentation setup</li>
+                                    <li>Basic CCTV or access control installation</li>
+                                    <li>Policy management system implementation</li>
+                                    <li>Employee security training materials</li>
+                                    <li>Regular compliance audit preparation</li>
+                                    <li>Data backup & recovery planning</li>
+                                    <li>Security incident response plan</li>
+                                    <li>Regular vulnerability assessments</li>
+                                    <li>Physical security audit & recommendations</li>
+                                </ul>
+                            </div>
+                            <div class="qa-cta">
+                                <button class="cta-button accent js-open-contact">Get Security Foundation</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Continuity Guard -->
+                <div class="qa-item" data-solution="continuity">
+                    <div class="qa-question">
+                        <div class="qa-header">
+                            <h3>What if my internet goes down? What if the power fails? How do I keep operating during
+                                outages?</h3>
+                        </div>
+                        <div class="qa-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="qa-answer">
+                        <div class="qa-content">
+                            <div class="qa-description">
+                                Keep your business running 24/7 with network failover and power redundancy solutions.
+                                Perfect for areas with unstable services or where downtime costs you money.
+                            </div>
+                            <div class="qa-inclusions">
+                                <h4>Core Inclusions</h4>
+                                <ul>
+                                    <li>Network failover system setup</li>
+                                    <li>Power redundancy (UPS) installation</li>
+                                    <li>Backup power system design</li>
+                                    <li>Disaster recovery planning</li>
+                                    <li>Multi-location connectivity solutions</li>
+                                    <li>24/7 critical system monitoring</li>
+                                    <li>Automatic failover testing</li>
+                                    <li>Backup internet connection setup</li>
+                                    <li>Emergency communication systems</li>
+                                    <li>Business impact analysis</li>
+                                </ul>
+                            </div>
+                            <div class="qa-cta">
+                                <button class="cta-button accent js-open-contact">Get Business Continuity</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Workflow & Growth -->
+                <div class="qa-item" data-solution="workflow">
+                    <div class="qa-question">
+                        <div class="qa-header">
+                            <h3>How do I enable remote work? How can I work smarter? How do I prepare my IT for growth?
+                            </h3>
+                        </div>
+                        <div class="qa-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="qa-answer">
+                        <div class="qa-content">
+                            <div class="qa-description">
+                                Modernise your operations with cloud tools, IoT automation, and secure remote access.
+                                Scale your IT infrastructure to support business growth and advanced workflows.
+                            </div>
+                            <div class="qa-inclusions">
+                                <h4>Core Inclusions</h4>
+                                <ul>
+                                    <li>Secure VPN & remote access setup</li>
+                                    <li>Cloud migration & management</li>
+                                    <li>IoT device integration & automation</li>
+                                    <li>Advanced mobile device management</li>
+                                    <li>Scalable network architecture design</li>
+                                    <li>Workflow optimisation consulting</li>
+                                    <li>Collaboration tool implementation</li>
+                                    <li>Custom software integration</li>
+                                    <li>Performance monitoring & analytics</li>
+                                    <li>Growth capacity planning</li>
+                                </ul>
+                            </div>
+                            <div class="qa-cta">
+                                <button class="cta-button accent js-open-contact">Get Advanced Workflow</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Employee Onboarding -->
+                <div class="qa-item" data-solution="onboarding">
+                    <div class="qa-question">
+                        <div class="qa-header">
+                            <h3>How do I quickly get new hires productive with proper equipment and access?</h3>
+                        </div>
+                        <div class="qa-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="qa-answer">
+                        <div class="qa-content">
+                            <div class="qa-description">
+                                Complete IT setup for new employees including hardware sourcing, software installation,
+                                security configuration, and technical support to ensure seamless day-one productivity.
+                            </div>
+                            <div class="qa-inclusions">
+                                <h4>Core Inclusions</h4>
+                                <ul>
+                                    <li>Hardware sourcing (PC, Mac, laptop based on role requirements)</li>
+                                    <li>Mobile phone setup and configuration</li>
+                                    <li>Complete software installation and licensing</li>
+                                    <li>VPN and security software configuration</li>
+                                    <li>Email account setup with proper groups and distribution lists</li>
+                                    <li>Professional email signature creation</li>
+                                    <li>Password setup and secure credential exchange</li>
+                                    <li>Access to shared drives and collaboration tools</li>
+                                    <li>Technical support for initial setup questions</li>
+                                    <li>Standardised workstation imaging for consistency</li>
+                                    <li>Asset tagging and inventory management</li>
+                                    <li>Day-one productivity checklist completion</li>
+                                </ul>
+                            </div>
+                            <div class="qa-cta">
+                                <button class="cta-button accent js-open-contact">Get Onboarding Solution</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employee Offboarding -->
+                <div class="qa-item" data-solution="offboarding">
+                    <div class="qa-question">
+                        <div class="qa-header">
+                            <h3>How do I securely transition departing employees without disrupting business?</h3>
+                        </div>
+                        <div class="qa-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="qa-answer">
+                        <div class="qa-content">
+                            <div class="qa-description">
+                                Secure IT transition for departing employees including hardware retrieval, data
+                                management, access revocation, and hardware refurbishment for reuse or resale.
+                            </div>
+                            <div class="qa-inclusions">
+                                <h4>Core Inclusions</h4>
+                                <ul>
+                                    <li>Secure hardware retrieval and inventory check</li>
+                                    <li>Complete data backup and transfer to designated personnel</li>
+                                    <li>Email forwarding setup to ensure no communication loss</li>
+                                    <li>Access revocation from all systems and applications</li>
+                                    <li>Password reset for all business accounts</li>
+                                    <li>Removal from email groups and distribution lists</li>
+                                    <li>Secure data wiping from returned devices</li>
+                                    <li>Hardware cleaning and refurbishment</li>
+                                    <li>Storage preparation for future employee use</li>
+                                    <li>Resale preparation and market valuation (if applicable)</li>
+                                    <li>Documentation of offboarding process completion</li>
+                                    <li>Compliance verification with data protection regulations</li>
+                                </ul>
+                            </div>
+                            <div class="qa-cta">
+                                <button class="cta-button accent js-open-contact">Get Offboarding Solution</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your needs. No hidden fees, no long-term contracts.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Individuals Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Individuals</h3>
+                        <div class="pricing-tagline">Peace of Mind for Home Professionals</div>
+                    </div>
+
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Perfect for freelancers & home offices</li>
+                            <li>Flat fee pricing model</li>
+                            <li>Remote & local support available</li>
+                            <li>Basic security monitoring</li>
+                            <li>Regular maintenance checks</li>
+                            <li>Can be billed to employer or individual</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-model">
+                        <h4>Pricing Model</h4>
+                        <p>Simple flat fee per site based on services required. Perfect for predictable budgeting with
+                            no surprises.</p>
+                    </div>
+
+                    <div class="price-range">
+                        <div class="amount">From £19</div>
+                        <div class="period">per site / month</div>
+                    </div>
+
+                    <p class="price-note">Price varies based on specific service requirements and support level needed.
+                    </p>
+
+                    <button class="cta-button accent js-open-contact" style="width: 100%;">Get Personal Quote</button>
+                </div>
+
+                <!-- Businesses Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Businesses</h3>
+                        <div class="pricing-tagline">Your Complete IT Department</div>
+                    </div>
+
+                    <div class="pricing-features">
+                        <ul>
+                            <li>For 3–20 employee businesses</li>
+                            <li>Fully managed IT services</li>
+                            <li>24/7 monitoring & support</li>
+                            <li>Enterprise-grade security</li>
+                            <li>Regular strategic reviews</li>
+                            <li>Vendor management included</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-model">
+                        <h4>Per User Pricing</h4>
+                        <p>Simple "Per User" model covering all devices for one person. Easy to understand, easy to
+                            budget, includes all essential services.</p>
+                    </div>
+
+                    <div class="price-range">
+                        <div class="amount">From £49</div>
+                        <div class="period">per user / month</div>
+                    </div>
+
+                    <p class="price-note">Price varies based on security requirements, support hours, and clearance
+                        levels. Other technology support billed per project.</p>
+
+                    <button class="cta-button accent js-open-contact" style="width: 100%;">Get Business Quote</button>
+                </div>
+            </div>
+
+            <!-- Scope Explanation -->
+            <div class="scope-explanation">
+                <h4>Services Outside Standard Pricing Models</h4>
+                <p>For services or solutions not directly tied to an individual person (such as organisation-wide
+                    infrastructure, multi-site deployments, or specialised project work), we approach pricing on a
+                    per-project basis. These include CCTV installation, network infrastructure setup, access control
+                    systems, and other site-wide technology solutions. Contact us for a custom quote tailored to your
+                    specific requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-container">
+                <h2>Ready for Stress-Free IT Management?</h2>
+                <p>Join dozens of small businesses and home offices who trust GOTX with their technology needs.
+                    Experience the difference of premium, locally-supported IT management designed for relaxed,
+                    productive environments.</p>
+                <button class="cta-button accent js-open-contact">Schedule a GOTX Consultation</button>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: var(--metal-dark);">No long-term contracts •
+                    30-day money-back guarantee • Local technicians available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                        alt="GOTX Managed IT" class="footer-logo">
+                    <p style="color: var(--metal-mid); margin-top: 10px;">Premium IT management for small businesses and
+                        home offices. Fully managed with local support.</p>
+                    <div style="margin-top: 20px;">
+                        <img src="https://raw.githubusercontent.com/markotuisk/logos/a8a6b8d29bea90c1e59d1e0cb6d0613e3a3a66b3/GOTX%20logo.png"
+                            alt="GOTX Company Logo"
+                            style="height: 50px; opacity: 0.9; filter: grayscale(100%); transition: all 0.3s ease;">
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Network Infrastructure</a></li>
+                        <li><a href="#services">Hardware Management</a></li>
+                        <li><a href="#services">Video Surveillance</a></li>
+                        <li><a href="#services">Access Control</a></li>
+                        <li><a href="#services">Cloud Solutions</a></li>
+                        <li><a href="#services">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#solutions">Essentials Assurance</a></li>
+                        <li><a href="#solutions">Security Foundation</a></li>
+                        <li><a href="#solutions">Business Continuity</a></li>
+                        <li><a href="#solutions">Advanced Workflow</a></li>
+                        <li><a href="#solutions">New Employee Onboarding</a></li>
+                        <li><a href="#solutions">Employee Offboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About GOTX</a></li>
+                        <li><a href="approach.html">Our Approach</a></li>
+                        <li><a href="stories.html">Client Stories</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Media</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                    <p
+                        style="margin-top: 20px; color: var(--metal-dark); font-size: 0.85rem; font-style: italic; line-height: 1.4;">
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 GOTX Connect Ltd. All rights reserved. Premium IT management for small businesses.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner">
+        <div class="container cookie-container">
+            <div class="cookie-text">
+                <p>
+                    We use essential cookies for site functionality and analytics to improve our services.
+                    By continuing to use our site, you accept our use of cookies.
+                    <a href="#">View Cookie Policy</a>
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;">
+                    Accept All Cookies
+                </button>
+                <button id="reject-cookies" class="cancel-button" style="padding: 8px 20px;">
+                    Essential Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

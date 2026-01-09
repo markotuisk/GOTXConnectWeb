@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | GOTX Managed IT</title>
+
+    <meta name="description"
+        content="Join the GOTX Squad. We are looking for passionate, caring individuals for contract, part-time, or full-time roles.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Careers | GOTX Managed IT">
+    <meta property="og:description" content="Join the GOTX Squad. Passion and care required.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotx-managed-it.co.uk/careers.html">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://gotx-managed-it.co.uk/careers.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/markotuisk/logos/30f84e9b742b0f746e2adf4d15f169ba15e8ce0b/image%201.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .careers-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .careers-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--metal-mid);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .value-card {
+            background: linear-gradient(145deg, #1e1e1e, #141414);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            color: var(--metal-light);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .value-card p {
+            color: var(--metal-mid);
+            line-height: 1.6;
+        }
+
+        .apply-section {
+            background: rgba(30, 30, 30, 0.5);
+            padding: 80px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .apply-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .apply-steps {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .apply-steps h3 {
+            color: var(--metal-light);
+            margin-bottom: 15px;
+        }
+
+        .apply-steps p {
+            color: var(--metal-mid);
+            margin-bottom: 10px;
+        }
+
+        .roles-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--metal-light);
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="logo-image">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#contact" class="js-open-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button js-open-contact">Experience Relief</button>
+        </div>
+    </header>
+
+    <!-- Contact Form Overlay -->
+    <div id="contactOverlay" class="contact-overlay">
+        <div class="contact-form-container">
+            <div class="form-header">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="form-logo">
+                <p>Join the Squad. Tell us about yourself.</p>
+                <button class="form-close">&times;</button>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-body">
+                    <div class="form-row">
+                        <div class="form-group compact-group">
+                            <label>I am:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="individual" required>
+                                    <span>Individual</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="business" required>
+                                    <span>Business</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group compact-group">
+                            <label>Availability:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="asap">
+                                    <span>ASAP</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="flexible">
+                                    <span>Flexible</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Location / Postcode *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="Where are you based?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Introduction & Experience *</label>
+                        <textarea id="description" name="description" required
+                            placeholder="Please state clearly that you are interested in working with us. Tell us about your passion and experience..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="cta-button accent">Submit Application</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="careers-hero">
+        <div class="container">
+            <h1>Join The Squad</h1>
+            <p class="careers-intro">
+                We are looking for people with <strong>passion</strong>, a genuine <strong>sense of care</strong>, and a
+                drive to be **helpful**.
+                If you believe technology should solve problems, not create them, you belong here.
+            </p>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-heart-pulse"></i></div>
+                    <h3>Passion & Care</h3>
+                    <p>Skills can be taught, but caring cannot. We value empathy and the desire to help others above all
+                        else.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-hand-holding-hand"></i></div>
+                    <h3>Helpfulness</h3>
+                    <p>We don't just fix tickets; we help people. We look for proactive problem solvers who take pride
+                        in service.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Flexibility</h3>
+                    <p>We welcome everyone. Contractual, Part-time, Full-time. If you fit the culture, we'll find the
+                        fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apply-section">
+        <div class="container apply-container">
+            <h2>How to Apply</h2>
+            <p style="color: var(--metal-mid); margin-top: 10px;">We keep it simple. No lengthy portals.</p>
+
+            <div class="apply-steps">
+                <h3><i class="fas fa-paper-plane" style="color: var(--accent-blue); margin-right: 10px;"></i> Use Our
+                    Contact Form</h3>
+                <p>1. Click the button below to open our standard contact form.</p>
+                <p>2. Fill in your details.</p>
+                <p>3. <strong>Important:</strong> In the 'Description' section, state clearly that you are interested in
+                    working with us.</p>
+                <p>4. Tell us briefly why you want to join GOTX.</p>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <span class="roles-tag">Contractual</span>
+                <span class="roles-tag">Part-Time</span>
+                <span class="roles-tag">Full-Time</span>
+            </div>
+
+            <button class="cta-button js-open-contact" style="font-size: 1.1rem; padding: 15px 40px;">Drop Us a
+                Message</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                        alt="GOTX Managed IT" class="footer-logo">
+                    <p style="color: var(--metal-mid); margin-top: 10px;">Premium IT management for small businesses and
+                        home offices. Fully managed with local support.</p>
+                    <div style="margin-top: 20px;">
+                        <img src="https://raw.githubusercontent.com/markotuisk/logos/a8a6b8d29bea90c1e59d1e0cb6d0613e3a3a66b3/GOTX%20logo.png"
+                            alt="GOTX Company Logo"
+                            style="height: 50px; opacity: 0.9; filter: grayscale(100%); transition: all 0.3s ease;">
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Network Infrastructure</a></li>
+                        <li><a href="index.html#services">Hardware Management</a></li>
+                        <li><a href="index.html#services">Video Surveillance</a></li>
+                        <li><a href="index.html#services">Access Control</a></li>
+                        <li><a href="index.html#services">Cloud Solutions</a></li>
+                        <li><a href="index.html#services">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="index.html#solutions">Essentials Assurance</a></li>
+                        <li><a href="index.html#solutions">Security Foundation</a></li>
+                        <li><a href="index.html#solutions">Business Continuity</a></li>
+                        <li><a href="index.html#solutions">Advanced Workflow</a></li>
+                        <li><a href="index.html#solutions">New Employee Onboarding</a></li>
+                        <li><a href="index.html#solutions">Employee Offboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About GOTX</a></li>
+                        <li><a href="approach.html">Our Approach</a></li>
+                        <li><a href="stories.html">Client Stories</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Media</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 GOTX Connect Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Stories | GOTX Managed IT</title>
+
+    <meta name="description"
+        content="Read realistic stories from businesses and individuals in Reading and the Thames Valley who found relief with GOTX Managed IT.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Client Stories | GOTX Managed IT">
+    <meta property="og:description" content="Real IT problems, solved for real people in the Thames Valley.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotx-managed-it.co.uk/stories.html">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://gotx-managed-it.co.uk/stories.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/markotuisk/logos/30f84e9b742b0f746e2adf4d15f169ba15e8ce0b/image%201.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .stories-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .stories-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--metal-mid);
+        }
+
+        .story-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .story-card {
+            background: rgba(30, 30, 30, 0.4);
+            border-radius: 12px;
+            padding: 40px;
+            border-left: 4px solid var(--accent-blue);
+            position: relative;
+        }
+
+        .story-card::before {
+            content: '\201C';
+            /* Quote mark */
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.05);
+            font-family: serif;
+        }
+
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .story-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--metal-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+        }
+
+        .story-meta h3 {
+            color: var(--metal-light);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .story-meta span {
+            color: var(--metal-mid);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .story-content {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #d1d5db;
+        }
+
+        .story-content p {
+            margin-bottom: 15px;
+        }
+
+        .story-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .problem-tag {
+            display: inline-block;
+            background: rgba(255, 71, 87, 0.1);
+            color: #ff6b81;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-weight: 600;
+            margin-top: 20px;
+            /* Moved to bottom, needs top margin */
+        }
+
+        .solution-highlight {
+            color: var(--accent-blue);
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="logo-image">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#contact" class="js-open-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button js-open-contact">Experience Relief</button>
+        </div>
+    </header>
+
+    <!-- Contact Form Overlay -->
+    <div id="contactOverlay" class="contact-overlay">
+        <div class="contact-form-container">
+            <div class="form-header">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="form-logo">
+                <p>Tell us about your needs and we'll get back to you promptly</p>
+                <button class="form-close">&times;</button>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-body">
+                    <div class="form-row">
+                        <div class="form-group compact-group">
+                            <label>I am:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="individual" required>
+                                    <span>Individual</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="business" required>
+                                    <span>Business</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group compact-group">
+                            <label>Contact me:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="asap">
+                                    <span>ASAP</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="flexible">
+                                    <span>Flexible</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode Where Services Are Required *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="e.g., RG2 0AA">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Brief Description of Your Needs *</label>
+                        <textarea id="description" name="description" required
+                            placeholder="Tell us about your IT needs..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="cta-button accent">Submit Request</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="stories-hero">
+        <div class="container">
+            <h1>Client Stories</h1>
+            <p class="stories-intro">
+                We don't do complex case studies that no one reads. Here are real snapshots of the daily battles we help
+                people win.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container story-container">
+
+            <!-- Story 1: Architecture -->
+            <div class="story-card">
+                <div class="story-content">
+                    <p>"We were drowning in CAD files. Every time someone tried to save a project, the server would just
+                        hang. It was properly stressful because we handle massive render files and if one corrupted,
+                        that was days of work gone."</p>
+                    <p>"Marko came in and didn't try to sell us some massive cloud system we couldn't afford. He just
+                        set up a proper local NAS drive that syncs overnight. Now we save instantly, and I sleep better
+                        knowing the backups actually work. Just simple, honest advice really."</p>
+                </div>
+                <span class="problem-tag">File Storage & Backups</span>
+            </div>
+
+            <!-- Story 2: Sarah J -->
+            <div class="story-card">
+                <div class="story-content">
+                    <p>"Honestly? I thought I'd have to move house. I'm a freelance designer and the WiFi in my study
+                        was basically non-existent. I was having to sit on the stairs to take Zoom calls with clients.
+                        It was embarrassing."</p>
+                    <p>"The team sorted it in about an hour. Put this little dish thing on the ceiling and now I get
+                        full bars in the garden office. Didn't make me feel stupid for not knowing how it worked,
+                        either. <span class="solution-highlight">Lifesavers.</span>"</p>
+                </div>
+                <span class="problem-tag">Home Office WiFi</span>
+            </div>
+
+            <!-- Story 3: Logistics -->
+            <div class="story-card">
+                <div class="story-content">
+                    <p>"We can't afford downtime. We move goods 24/7. But the amount of dodgy emails we were getting was
+                        getting ridiculous. One of the drivers nearly clicked a fake invoice link that looked bang on."
+                    </p>
+                    <p>"GOTX locked it down. They put in this filter system and forced everyone to use that
+                        authenticating app on their phones. A few of the lads moaned at first about the extra step, but
+                        we haven't had a single virus scare since. It's just professional."</p>
+                </div>
+                <span class="problem-tag">Email Security</span>
+            </div>
+
+            <!-- Story 4: David P -->
+            <div class="story-card">
+                <div class="story-content">
+                    <p>"Laptop decided to die the morning before a board meeting. Blue screen, the lot. I was in a
+                        proper state of panic."</p>
+                    <p>"Called them at 8am. They remote accessed in (don't ask me how, screen was blank for me), pulled
+                        the presentation files off, and emailed them to my phone so I could present. Saved my bacon.
+                        Plain and simple."</p>
+                </div>
+                <span class="problem-tag">Emergency Recovery</span>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                        alt="GOTX Managed IT" class="footer-logo">
+                    <p style="color: var(--metal-mid); margin-top: 10px;">Premium IT management for small businesses and
+                        home offices. Fully managed with local support.</p>
+                    <div style="margin-top: 20px;">
+                        <img src="https://raw.githubusercontent.com/markotuisk/logos/a8a6b8d29bea90c1e59d1e0cb6d0613e3a3a66b3/GOTX%20logo.png"
+                            alt="GOTX Company Logo"
+                            style="height: 50px; opacity: 0.9; filter: grayscale(100%); transition: all 0.3s ease;">
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Network Infrastructure</a></li>
+                        <li><a href="index.html#services">Hardware Management</a></li>
+                        <li><a href="index.html#services">Video Surveillance</a></li>
+                        <li><a href="index.html#services">Access Control</a></li>
+                        <li><a href="index.html#services">Cloud Solutions</a></li>
+                        <li><a href="index.html#services">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="index.html#solutions">Essentials Assurance</a></li>
+                        <li><a href="index.html#solutions">Security Foundation</a></li>
+                        <li><a href="index.html#solutions">Business Continuity</a></li>
+                        <li><a href="index.html#solutions">Advanced Workflow</a></li>
+                        <li><a href="index.html#solutions">New Employee Onboarding</a></li>
+                        <li><a href="index.html#solutions">Employee Offboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About GOTX</a></li>
+                        <li><a href="approach.html">Our Approach</a></li>
+                        <li><a href="stories.html">Client Stories</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Media</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 GOTX Connect Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
