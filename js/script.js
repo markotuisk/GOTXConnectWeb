@@ -409,4 +409,47 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btnVerifyYes) btnVerifyYes.addEventListener('click', () => handleVerification('CONFIRMED'));
     if (btnVerifyNo) btnVerifyNo.addEventListener('click', () => handleVerification('DENIED'));
     if (btnVerifySkip) btnVerifySkip.addEventListener('click', () => handleVerification('SKIPPED'));
+
+    // Newsletter Subscription handler
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('subscriberEmail');
+            const feedback = document.getElementById('newsletterFeedback');
+            const submitBtn = this.querySelector('button[type="submit"]');
+
+            if (!emailInput || !emailInput.value) return;
+
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = 'Joining...';
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: emailInput.value.trim() })
+                });
+
+                feedback.style.display = 'block';
+                if (response.ok) {
+                    feedback.textContent = 'Success! You are now subscribed to the GOTX mission list.';
+                    feedback.style.color = '#00f2ff';
+                    this.reset();
+                } else {
+                    const data = await response.json();
+                    feedback.textContent = `Error: ${data.error || 'Please try again later.'}`;
+                    feedback.style.color = '#ff4d4d';
+                }
+            } catch (error) {
+                feedback.style.display = 'block';
+                feedback.textContent = 'Connection error. Please try again later.';
+                feedback.style.color = '#ff4d4d';
+            } finally {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
 });

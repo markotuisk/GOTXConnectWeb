@@ -128,7 +128,6 @@
                     <li><a href="index.html#contact" class="js-open-contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="cta-button js-open-contact">Experience Relief</button>
         </div>
     </header>
 
@@ -220,11 +219,12 @@
             <div class="newsletter-section">
                 <h2>Stay Involved</h2>
                 <p>Don't be forgotten. Sign up to get the latest news delivered straight to your inbox.</p>
-                <form class="newsletter-form"
-                    onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will keep you updated.');">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" id="subscriberEmail" class="newsletter-input"
+                        placeholder="Enter your email address..." required>
                     <button type="submit" class="cta-button">Sign Up</button>
                 </form>
+                <div id="newsletterFeedback" style="margin-top: 20px; display: none;"></div>
             </div>
 
             <div class="updates-grid">
