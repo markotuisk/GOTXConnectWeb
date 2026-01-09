@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Approach | GOTX Managed IT</title>
+
+    <meta name="description"
+        content="The GOTX Approach: Flexible, reliable IT support within our '60-Minute Golden Hour' from Reading. Learn about our service zones and transparent policies.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Approach | GOTX Managed IT">
+    <meta property="og:description" content="Flexible, reliable IT support within our '60-Minute Golden Hour'.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotx-managed-it.co.uk/approach.html">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://gotx-managed-it.co.uk/approach.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/markotuisk/logos/30f84e9b742b0f746e2adf4d15f169ba15e8ce0b/image%201.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .approach-hero {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--metal-mid);
+        }
+
+        .zone-section {
+            background: rgba(30, 30, 30, 0.5);
+            padding: 80px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .zone-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .zones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .zone-card {
+            background: linear-gradient(145deg, #252525, #1a1a1a);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(80, 80, 80, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zone-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-blue);
+        }
+
+        .zone-card h3 {
+            color: var(--metal-light);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .zone-card p {
+            color: var(--metal-mid);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .value-prop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .qa-section {
+            padding: 80px 0;
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .qa-item {
+            margin-bottom: 40px;
+            background: rgba(30, 30, 30, 0.3);
+            border-radius: 8px;
+            padding: 30px;
+            border-left: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .qa-item:hover {
+            border-left-color: var(--accent-blue);
+        }
+
+        .qa-question {
+            font-size: 1.3rem;
+            color: var(--metal-light);
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .qa-question i {
+            color: var(--accent-blue);
+            font-size: 1rem;
+        }
+
+        .qa-answer {
+            color: var(--metal-mid);
+            line-height: 1.7;
+        }
+
+        .non-negotiable {
+            border-left-color: #ff4757 !important;
+            background: rgba(40, 20, 20, 0.4);
+        }
+
+        .non-negotiable .qa-question i {
+            color: #ff4757;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="logo-image">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#contact" class="js-open-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button js-open-contact">Experience Relief</button>
+        </div>
+    </header>
+
+    <!-- Contact Form Overlay -->
+    <div id="contactOverlay" class="contact-overlay">
+        <div class="contact-form-container">
+            <div class="form-header">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="form-logo">
+                <p>Tell us about your needs and we'll get back to you promptly</p>
+                <button class="form-close">&times;</button>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-body">
+                    <div class="form-row">
+                        <div class="form-group compact-group">
+                            <label>I am:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="individual" required>
+                                    <span>Individual</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="business" required>
+                                    <span>Business</span>
+                                </label>
+                            </div>
+                            <div class="error-message" id="userTypeError">Required</div>
+                        </div>
+
+                        <div class="form-group compact-group">
+                            <label>Contact me:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="asap">
+                                    <span>ASAP</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="flexible">
+                                    <span>Flexible</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                        <div class="error-message" id="fullNameError">Please enter your full name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode Where Services Are Required *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="e.g., RG2 0AA">
+                        <div class="error-message" id="postcodeError">Please enter your postcode</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Brief Description of Your Needs *</label>
+                        <textarea id="description" name="description" required
+                            placeholder="Tell us about your IT needs..."></textarea>
+                        <div class="error-message" id="descriptionError">Please describe your needs</div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="cta-button accent">Submit Request</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="approach-hero">
+        <div class="container">
+            <h1>Our Approach</h1>
+            <p class="intro-text">
+                We are at the beginning of our journey as a company, which means we can be flexible. Nothing is written
+                in stone, and policies can be shaped if the conditions are right. We believe in transparency,
+                reliability, and partnerships that make business sense.
+            </p>
+        </div>
+    </section>
+
+    <!-- Zone Section -->
+    <section class="zone-section">
+        <div class="container">
+            <div class="zone-title">
+                <h2>The 60-Minute Golden Hour</h2>
+                <p style="max-width: 700px; margin: 0 auto; color: var(--metal-mid); margin-top: 15px;">
+                    We operate strictly within a 60-minute travel radius from our RG2 base in Reading. Drawn by travel
+                    time, not just distance, ensuring our response times are genuine and our costs competitive.
+                </p>
+            </div>
+
+            <div class="zones-grid">
+                <div class="zone-card">
+                    <h3>Zone A: The Home Turf</h3>
+                    <p>The heart of the Thames Valley. From Reading, we cover Berkshire, Oxfordshire, and Hampshire with
+                        incredible access. We reach Newbury, Basingstoke, and High Wycombe largely before London-based
+                        teams exit the M25.</p>
+                </div>
+                <div class="zone-card">
+                    <h3>Zone B: The M4 Artery</h3>
+                    <p>The M4 is our main artery, connecting us instantly to Maidenhead, Slough, and Heathrow. If the
+                        motorway is gridlocked, we switch to our strategic rail links to ensure we arrive on time, every
+                        time.</p>
+                </div>
+                <div class="zone-card">
+                    <h3>Zone C: Smart London</h3>
+                    <p>We don't cover "all of London"—we cover "Accessible London" (West End & City). Thanks to the
+                        Elizabeth Line and GWR, we reach Paddington or Bond Street faster than tradesmen traveling from
+                        South London.</p>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 80px;">
+                <h2>Why It Makes Business Sense</h2>
+            </div>
+
+            <div class="value-prop-grid">
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-stopwatch"></i></div>
+                    <h3>Reliability</h3>
+                    <p style="color: var(--metal-mid); font-size: 0.95rem;">
+                        In an emergency, time is everything. We limit our radius so when we say "we're on our way," it
+                        means something.
+                    </p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <h3>Cost Efficiency</h3>
+                    <p style="color: var(--metal-mid); font-size: 0.95rem;">
+                        London-speed response with Reading-based pricing. No inflated HQ overheads passed on to you.
+                    </p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-user-check"></i></div>
+                    <h3>Quality</h3>
+                    <p style="color: var(--metal-mid); font-size: 0.95rem;">
+                        Our engineers arrive fresh via high-speed links, not exhausted from hours fighting the M25 or
+                        North Circular.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <section class="qa-section">
+        <div class="container qa-container">
+            <div class="section-title">
+                <h2>Common Questions</h2>
+                <p style="color: var(--metal-mid); margin-bottom: 40px;">Everything you need to know about working with
+                    us.</p>
+            </div>
+
+            <div class="qa-item">
+                <div class="qa-question">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    Billing & Consultations
+                </div>
+                <div class="qa-answer">
+                    <p>Our service portal is currently being built and will integrate all necessary services and
+                        visibility. Occasional consultations are considered reasonable and are not billed. If a
+                        consultation is billable, we will clearly communicate the need and the price beforehand.</p>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="qa-question">
+                    <i class="fas fa-car"></i>
+                    Travel Costs
+                </div>
+                <div class="qa-answer">
+                    <p>We are in the beginning of our company journey and need to be flexible. However, travel in the UK
+                        is expensive. Travel is considered billable and will be clearly communicated and priced
+                        beforehand. Labor and materials also have costs that must be covered.</p>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="qa-question">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    Flexible Financing
+                </div>
+                <div class="qa-answer">
+                    <p>Some costs can be spread across months, but only on the condition that it is clearly communicated
+                        from the start. Costs for short-term financing depend on the current UK economic state.</p>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="qa-question">
+                    <i class="fas fa-server"></i>
+                    Equipment: Rented vs Sold
+                </div>
+                <div class="qa-answer">
+                    <p>Most network equipment is either rented to the customer or sold, and the quote will state this
+                        clearly.</p>
+                    <ul style="margin-top: 10px; margin-left: 20px; list-style-type: disc;">
+                        <li style="margin-bottom: 8px;"><strong>Rented Equipment:</strong> Considered to be returned at
+                            the end of the service period. It gets serviced at our cost and considered for upgrades as
+                            better performing devices become available.</li>
+                        <li><strong>Sold Equipment:</strong> Serviced according to terms agreed between parties.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="qa-item non-negotiable">
+                <div class="qa-question">
+                    <i class="fas fa-shield-alt"></i>
+                    Non-Negotiables
+                </div>
+                <div class="qa-answer">
+                    <p><strong>Health & Safety</strong> and the <strong>Security of Devices</strong> are non-negotiable.
+                        These areas will always get our full attention and adherence to the highest standards.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <p style="color: var(--metal-mid); font-style: italic;">
+                    "We are built on transparency. If you have a specific requirement, talk to us. We shape policies
+                    where it makes sense."
+                </p>
+                <button class="cta-button js-open-contact" style="margin-top: 30px;">Start the Conversation</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                        alt="GOTX Managed IT" class="footer-logo">
+                    <p style="color: var(--metal-mid); margin-top: 10px;">Premium IT management for small businesses and
+                        home offices. Fully managed with local support.</p>
+                    <div style="margin-top: 20px;">
+                        <img src="https://raw.githubusercontent.com/markotuisk/logos/a8a6b8d29bea90c1e59d1e0cb6d0613e3a3a66b3/GOTX%20logo.png"
+                            alt="GOTX Company Logo"
+                            style="height: 50px; opacity: 0.9; filter: grayscale(100%); transition: all 0.3s ease;">
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Network Infrastructure</a></li>
+                        <li><a href="index.html#services">Hardware Management</a></li>
+                        <li><a href="index.html#services">Video Surveillance</a></li>
+                        <li><a href="index.html#services">Access Control</a></li>
+                        <li><a href="index.html#services">Cloud Solutions</a></li>
+                        <li><a href="index.html#services">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="index.html#solutions">Essentials Assurance</a></li>
+                        <li><a href="index.html#solutions">Security Foundation</a></li>
+                        <li><a href="index.html#solutions">Business Continuity</a></li>
+                        <li><a href="index.html#solutions">Advanced Workflow</a></li>
+                        <li><a href="index.html#solutions">New Employee Onboarding</a></li>
+                        <li><a href="index.html#solutions">Employee Offboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About GOTX</a></li>
+                        <li><a href="approach.html">Our Approach</a></li>
+                        <li><a href="stories.html">Client Stories</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Media</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 GOTX Connect Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

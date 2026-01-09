@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & News | GOTX Managed IT</title>
+
+    <meta name="description"
+        content="GOTX Media: Stay involved and informed. Sign up for our upcoming News Media & Public Communication updates.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Media & News | GOTX Managed IT">
+    <meta property="og:description" content="Stay involved. Join our mailing list for the latest updates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotx-managed-it.co.uk/blog.html">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://gotx-managed-it.co.uk/blog.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/markotuisk/logos/30f84e9b742b0f746e2adf4d15f169ba15e8ce0b/image%201.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .media-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .media-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--metal-mid);
+        }
+
+        .newsletter-section {
+            background: linear-gradient(145deg, #1e1e1e, #141414);
+            padding: 60px 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-top: 4px solid var(--accent-blue);
+        }
+
+        .newsletter-section h2 {
+            color: var(--metal-light);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .newsletter-section p {
+            color: var(--metal-mid);
+            margin-bottom: 30px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+        }
+
+        @media (min-width: 600px) {
+            .newsletter-form {
+                flex-direction: row;
+            }
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: var(--metal-light);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .updates-grid {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            opacity: 0.6;
+            /* Slight opacity to indicate "coming soon" vibe */
+        }
+
+        .update-card-placeholder {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            color: var(--metal-mid);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="logo-image">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#contact" class="js-open-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button js-open-contact">Experience Relief</button>
+        </div>
+    </header>
+
+    <!-- Contact Form Overlay -->
+    <div id="contactOverlay" class="contact-overlay">
+        <div class="contact-form-container">
+            <div class="form-header">
+                <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                    alt="GOTX Managed IT" class="form-logo">
+                <p>Tell us about your needs and we'll get back to you promptly</p>
+                <button class="form-close">&times;</button>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-body">
+                    <div class="form-row">
+                        <div class="form-group compact-group">
+                            <label>I am:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="individual" required>
+                                    <span>Individual</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="userType" value="business" required>
+                                    <span>Business</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group compact-group">
+                            <label>Contact me:</label>
+                            <div class="radio-group compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="asap">
+                                    <span>ASAP</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contactTime" value="flexible">
+                                    <span>Flexible</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode Where Services Are Required *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="e.g., RG2 0AA">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Brief Description of Your Needs *</label>
+                        <textarea id="description" name="description" required
+                            placeholder="Tell us about your IT needs..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="cta-button accent">Submit Request</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="media-hero">
+        <div class="container">
+            <h1>News Media & Public Communication</h1>
+            <p class="media-intro">
+                We are currently building out our dedicated News Media services. <br>
+                Our goal is to share relevant, personal, and exciting updates about what's coming next for GOTX.
+            </p>
+
+            <div class="newsletter-section">
+                <h2>Stay Involved</h2>
+                <p>Don't be forgotten. Sign up to get the latest news delivered straight to your inbox.</p>
+                <form class="newsletter-form"
+                    onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will keep you updated.');">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                    <button type="submit" class="cta-button">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="updates-grid">
+                <div class="update-card-placeholder">
+                    <i class="fas fa-newspaper"
+                        style="font-size: 2rem; margin-bottom: 20px; color: var(--metal-mid);"></i>
+                    <h3>Service Updates</h3>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="update-card-placeholder">
+                    <i class="fas fa-bullhorn"
+                        style="font-size: 2rem; margin-bottom: 20px; color: var(--metal-mid);"></i>
+                    <h3>Company Announcements</h3>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="update-card-placeholder">
+                    <i class="fas fa-lightbulb"
+                        style="font-size: 2rem; margin-bottom: 20px; color: var(--metal-mid);"></i>
+                    <h3>Tech Insights</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
+                        alt="GOTX Managed IT" class="footer-logo">
+                    <p style="color: var(--metal-mid); margin-top: 10px;">Premium IT management for small businesses and
+                        home offices. Fully managed with local support.</p>
+                    <div style="margin-top: 20px;">
+                        <img src="https://raw.githubusercontent.com/markotuisk/logos/a8a6b8d29bea90c1e59d1e0cb6d0613e3a3a66b3/GOTX%20logo.png"
+                            alt="GOTX Company Logo"
+                            style="height: 50px; opacity: 0.9; filter: grayscale(100%); transition: all 0.3s ease;">
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Network Infrastructure</a></li>
+                        <li><a href="index.html#services">Hardware Management</a></li>
+                        <li><a href="index.html#services">Video Surveillance</a></li>
+                        <li><a href="index.html#services">Access Control</a></li>
+                        <li><a href="index.html#services">Cloud Solutions</a></li>
+                        <li><a href="index.html#services">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="index.html#solutions">Essentials Assurance</a></li>
+                        <li><a href="index.html#solutions">Security Foundation</a></li>
+                        <li><a href="index.html#solutions">Business Continuity</a></li>
+                        <li><a href="index.html#solutions">Advanced Workflow</a></li>
+                        <li><a href="index.html#solutions">New Employee Onboarding</a></li>
+                        <li><a href="index.html#solutions">Employee Offboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About GOTX</a></li>
+                        <li><a href="approach.html">Our Approach</a></li>
+                        <li><a href="stories.html">Client Stories</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Media</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 GOTX Connect Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

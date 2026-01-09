@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gotx-managed-it.co.uk/sitemap.xml
