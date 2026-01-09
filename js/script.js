@@ -206,14 +206,6 @@ function handleVerification(status) {
     } catch (e) { console.log("Verification log failed", e); }
 
     closeVerificationModal();
-
-    if (status === 'CONFIRMED') {
-        alert("Transmission Complete. Signal Confirmed. We are on the way.");
-    } else if (status === 'DENIED') {
-        alert("Understood. We have logged the potential delivery failure and will attempt manual contact.");
-    } else {
-        alert("Roger that. Mission Logged.");
-    }
 }
 
 function showComingSoon() {
