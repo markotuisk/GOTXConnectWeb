@@ -15,6 +15,9 @@ export async function onRequestPost({ request, env }) {
             });
         }
 
+        // Generate a unique Task ID for tracking
+        const taskId = `GOTX-${Math.random().toString(36).substring(2, 7).toUpperCase()}`;
+
         // Prepare Email Content (Injecting data into the template)
         // Note: In a real build, we might import this, but for simple Pages Functions, 
         // embedding the template string is robust.
@@ -44,7 +47,7 @@ export async function onRequestPost({ request, env }) {
             <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png" alt="GOTX Managed IT">
         </div>
         <div class="content">
-            <div class="h1">New Mission Inquiry</div>
+            <div class="h1">New Mission Inquiry: ${taskId}</div>
             <p style="color: #aaaaaa; margin-bottom: 30px;">A new contact request has been received from the website.</p>
             <div class="field-row"><span class="label">Client Name</span><div class="value">${formData.fullName}</div></div>
             <div class="field-row"><span class="label">Contact Info</span><div class="value">${formData.email}<br>${formData.phone || 'N/A'}</div></div>
@@ -72,9 +75,10 @@ export async function onRequestPost({ request, env }) {
         const payload = {
             "from": { "address": "no-reply@gotx.uk", "name": "GOTX Website" },
             "to": [
-                { "email_address": { "address": "info@gotx.uk", "name": "GOTX Info" } }
+                { "email_address": { "address": "info@gotx.uk", "name": "GOTX Info" } },
+                { "email_address": { "address": formData.email, "name": formData.fullName } }
             ],
-            "subject": `New Inquiry from ${formData.fullName}: ${formData.userType}`,
+            "subject": `New Inquiry from ${formData.fullName}: ${formData.userType} [${taskId}]`,
             "htmlbody": emailHtml,
         };
 
@@ -94,7 +98,7 @@ export async function onRequestPost({ request, env }) {
             return new Response(JSON.stringify({ error: "Failed to send email" }), { status: 502 });
         }
 
-        return new Response(JSON.stringify({ message: "Mission Received" }), {
+        return new Response(JSON.stringify({ message: "Mission Received", taskId: taskId }), {
             status: 200,
             headers: { "Content-Type": "application/json" }
         });
