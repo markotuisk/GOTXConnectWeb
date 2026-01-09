@@ -1,0 +1,13 @@
+#:schema https://pages.cloudflare.com/pages-config.schema.json
+name = "gotx-connect-web"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "."
+
+[vars]
+# Add non-sensitive environment variables here
+# ZEPTOMAIL_TOKEN should be set in the Cloudflare Dashboard for security
+
+[[routes]]
+# This ensures Cloudflare knows where to look for functions
+pattern = "/api/*"
+script = "functions/api"
