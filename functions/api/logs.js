@@ -9,8 +9,15 @@ export async function onRequestGet({ request, env }) {
         const token = searchParams.get('token');
 
         // Security check: Match against a secret token
-        // In a real environment, this should be stored in an environment variable.
-        const SECURE_TOKEN = env.LOGS_TOKEN || "GOTX-ADMIN-99";
+        // This MUST be set in Cloudflare Environment Variables as LOGS_TOKEN
+        const SECURE_TOKEN = env.LOGS_TOKEN;
+
+        if (!SECURE_TOKEN) {
+            return new Response(JSON.stringify({ error: "Access token not configured on server. Set LOGS_TOKEN in Cloudflare Settings." }), {
+                status: 500,
+                headers: { "Content-Type": "application/json" }
+            });
+        }
 
         if (token !== SECURE_TOKEN) {
             return new Response(JSON.stringify({ error: "Unauthorized access" }), {
