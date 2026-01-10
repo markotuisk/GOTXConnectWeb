@@ -98,6 +98,25 @@ export async function onRequestPost({ request, env }) {
             return new Response(JSON.stringify({ error: "Failed to send email" }), { status: 502 });
         }
 
+        // --- PERSISTENT LOGGING (KV) ---
+        // We do this after the email is sent to prioritize communication.
+        // We use a try/catch so that if KV fails, the user still gets a success message.
+        try {
+            if (env.SUBMISSIONS) {
+                const logEntry = {
+                    taskId: taskId,
+                    timestamp: new Date().toISOString(),
+                    status: 'SENT',
+                    data: formData
+                };
+                // Key format: mission:taskId
+                await env.SUBMISSIONS.put(`mission:${taskId}`, JSON.stringify(logEntry));
+            }
+        } catch (kvError) {
+            console.error("KV Logging Error:", kvError);
+            // We don't return an error response here because the email was already sent.
+        }
+
         return new Response(JSON.stringify({ message: "Mission Received", taskId: taskId }), {
             status: 200,
             headers: { "Content-Type": "application/json" }

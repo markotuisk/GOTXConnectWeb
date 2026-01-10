@@ -37,6 +37,22 @@ export async function onRequestPost({ request, env }) {
             })
         });
 
+        // --- UPDATE PERSISTENT LOG (KV) ---
+        try {
+            if (env.SUBMISSIONS) {
+                const key = `mission:${taskId}`;
+                const existingData = await env.SUBMISSIONS.get(key, { type: 'json' });
+
+                if (existingData) {
+                    existingData.status = status;
+                    existingData.verifiedAt = new Date().toISOString();
+                    await env.SUBMISSIONS.put(key, JSON.stringify(existingData));
+                }
+            }
+        } catch (kvError) {
+            console.error("KV Verification Update Error:", kvError);
+        }
+
         return new Response(JSON.stringify({ success: true }), { status: 200 });
 
     } catch (e) {
