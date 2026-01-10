@@ -31,7 +31,7 @@ export async function onRequestGet({ request, env }) {
         const submissions = [];
 
         // Fetch each submission's data
-        for (const key information of list.keys) {
+        for (const key of list.keys) {
             const data = await env.SUBMISSIONS.get(key.name, { type: 'json' });
             if (data) {
                 submissions.push(data);
