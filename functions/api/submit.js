@@ -103,7 +103,14 @@ export async function onRequestPost({ request, env }) {
         // We use a try/catch so that if KV fails, the user still gets a success message.
         try {
             if (env.SUBMISSIONS) {
+                // 1. Get and Increment the Counter
+                const counterKey = 'stats:counter';
+                let counter = await env.SUBMISSIONS.get(counterKey);
+                counter = counter ? parseInt(counter) + 1 : 1;
+                await env.SUBMISSIONS.put(counterKey, counter.toString());
+
                 const logEntry = {
+                    logId: `Log:${counter}`,
                     taskId: taskId,
                     timestamp: new Date().toISOString(),
                     status: 'SENT',
