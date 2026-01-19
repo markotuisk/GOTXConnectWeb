@@ -1,0 +1,85 @@
+ZEPTOMAIL VERIFICATION - GOTX CONNECT
+
+QUESTION 1:
+Please share the name and screenshot of the application using which you will be sending the transactional emails.
+
+ANSWER:
+Name: GOTX Connect. Website (Custom Application). www.gotx.uk
+
+Description:
+Our application is the official company website (www.gotx.uk). We use the ZeptoMail API to send the following transactional emails:
+1. Automated inquiry receipts to customers who submit our "task brief" contact form.
+2. Internal alerts to our staff for new task inquiries.
+3. Welcome emails to users who voluntarily opt-in to our "Stay Involved" mission list.
+
+All emails are strictly transactional and triggered exclusively by specific user actions on the website.
+
+--
+
+QUESTION 2:
+Please provide the backend details where you will be adding the SMTP/API information of ZeptoMail.
+
+ANSWER:
+Infrastructure: 
+Our application is hosted on Cloudflare Pages. The backend logic is handled via Cloudflare Pages Functions (a secure, serverless environment).
+
+Integration:
+We have integrated the ZeptoMail REST API into our server-side JavaScript functions (located at /functions/api/submit.js and /functions/api/subscribe.js). These functions execute only on the server ('The Edge'), ensuring the API credentials are never exposed to the client-side browser.
+
+Security:
+The ZeptoMail API Token is stored securely as an Environment Variable (ZEPTOMAIL_TOKEN) within the encrypted Cloudflare settings dashboard. It is not hardcoded in the source files and is physically inaccessible to anyone visiting the website.
+
+--
+
+QUESTION 3:
+Share a sample template of emails you wish to send using ZeptoMail.
+
+ANSWER:
+Below is the HTML template used for our automated task inquiry receipts. It dynamically populates the user's name and inquiry details.
+
+--- SAMPLE HTML TEMPLATE ---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { margin: 0; padding: 0; background-color: #121212; font-family: 'Arial', sans-serif; color: #e0e0e0; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #1e1e1e; border: 1px solid #333; }
+        .header { background-color: #121212; padding: 30px; text-align: center; border-bottom: 3px solid #00f2ff; }
+        .header img { height: 50px; }
+        .content { padding: 40px 30px; }
+        .h1 { color: #ffffff; font-size: 24px; margin-bottom: 20px; font-weight: bold; }
+        .field-row { margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 15px; }
+        .label { color: #00f2ff; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; display: block; }
+        .value { color: #ffffff; font-size: 16px; line-height: 1.5; }
+        .footer { background-color: #121212; padding: 20px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #333; }
+        .highlight { background: rgba(0, 242, 255, 0.1); border-left: 4px solid #00f2ff; padding: 15px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png" alt="GOTX Managed IT">
+        </div>
+        <div class="content">
+            <div class="h1">New Task Inquiry: [TASK_ID]</div>
+            <p style="color: #aaaaaa; margin-bottom: 30px;">A new contact request has been received from the website.</p>
+            <div class="field-row"><span class="label">Client Name</span><div class="value">[USER_NAME]</div></div>
+            <div class="field-row"><span class="label">Contact Info</span><div class="value">[USER_EMAIL]</div></div>
+            <div class="highlight"><span class="label">Task Brief</span><div class="value">[USER_MESSAGE]</div></div>
+        </div>
+        <div class="footer">&copy; 2026 GOTX Connect Ltd. Secure Transmission.<br>Sent from www.gotx.uk</div>
+    </div>
+</body>
+</html>
+
+--- END OF SAMPLE ---
+
+--
+
+RECOMMENDED SCREENSHOTS TO PROVIDE:
+1. A screenshot of the Contact Form on your website.
+2. A screenshot of the "Stay Involved" section on the Media page.
+3. (Optional) A censored screenshot of your Cloudflare 'Environment Variables' settings showing the name ZEPTOMAIL_TOKEN (with the value hidden).

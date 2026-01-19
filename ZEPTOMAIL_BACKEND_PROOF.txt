@@ -1,0 +1,59 @@
+ZEPTOMAIL BACKEND VERIFICATION - GOTX CONNECT (TECHNICAL PROOF)
+
+BUSINESS CONTEXT:
+GOTX Connect is a Managed IT Services startup. We are currently building our infrastructure. Our website serves as the primary intake for "Task Briefs" from potential clients.
+
+---
+
+TECHNICAL ARCHITECTURE:
+Our application is built on a modern "Serverless" architecture using Cloudflare Pages. 
+
+- Backend: Cloudflare Pages Functions (v8 Runtime)
+- Frontend: HTML5/Vanilla JS/CSS3
+- Data Integrity: Cloudflare KV (Key-Value Storage) for persistent logging.
+
+---
+
+API INTEGRATION & SECURITY (THE "BACKEND"):
+We do NOT use SMTP for this application. We have implemented a custom integration using the ZeptoMail REST API.
+
+1. Execution Environment:
+All email-sending logic is handled in the "/functions" directory. These scripts run on Cloudflare's Edge network. They are physically inaccessible to users and cannot be viewed by inspecting the website source code.
+
+2. Credential Protection:
+Our ZeptoMail API Token is stored as a secret Environment Variable (LOGS_TOKEN or ZEPTOMAIL_TOKEN) in our Cloudflare project settings. It is never hardcoded.
+
+3. Code Snippet Proof:
+Below is the representative logic from our "submit.js" backend function. This proves the email is prepared and sent strictly server-side:
+
+--- BEGIN SERVER-SIDE SNIPPET ---
+
+const zeptoUrl = "https://api.zeptomail.eu/v1.1/email";
+const zeptoToken = env.ZEPTOMAIL_TOKEN; // Injected from secure vault
+
+const payload = {
+    "from": { "address": "no-reply@gotx.uk", "name": "GOTX Website" },
+    "to": [
+        { "email_address": { "address": "info@gotx.uk", "name": "GOTX Info" } },
+        { "email_address": { "address": formData.email, "name": formData.fullName } }
+    ],
+    "subject": `New Inquiry from ${formData.fullName}: ${formData.userType} [${taskId}]`,
+    "htmlbody": emailHtml,
+};
+
+const response = await fetch(zeptoUrl, {
+    method: "POST",
+    headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": zeptoToken // Credentials passed securely here
+    },
+    body: JSON.stringify(payload)
+});
+
+--- END SERVER-SIDE SNIPPET ---
+
+---
+
+SUMMARY FOR AUDIT:
+This setup ensures maximum deliverability and security. Because we handle the inquiry server-side, we can also store a local audit log of every email attempt to ensure no critical client data is ever lost.
