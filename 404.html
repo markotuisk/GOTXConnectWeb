@@ -4,44 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 | GOTX Managed IT</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png"
-        href="https://raw.githubusercontent.com/markotuisk/logos/30f84e9b742b0f746e2adf4d15f169ba15e8ce0b/image%201.png">
-
+    <title>404 | GOTX</title>
+    <meta name="description" content="This page is not on gotx.uk.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://gotx.uk/404.html">
+    <meta name="google-site-verification" content="">
+    <meta name="msvalidate.01" content="">
+    <script src="/js/seo-config.js"></script>
+    <script src="/js/seo.js"></script>
+    <link rel="icon" type="image/png" href="assets/branding/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .error-container {
-            min-height: 60vh;
+        .error-shell {
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 80px 20px 60px;
         }
-
-        .error-code {
-            font-size: 6rem;
-            font-weight: 700;
+        .error-status {
+            font-size: 0.75rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
             color: var(--accent-blue);
-            line-height: 1;
+            margin-bottom: 12px;
+        }
+        .error-code {
+            font-size: clamp(4.5rem, 14vw, 7.5rem);
+            font-weight: 700;
+            color: var(--metal-light);
+            line-height: 0.9;
             margin-bottom: 20px;
         }
-
-        .error-message {
-            font-size: 1.5rem;
+        .error-shell h1 {
+            font-size: 1.6rem;
             color: var(--metal-light);
-            margin-bottom: 30px;
+            margin-bottom: 16px;
         }
-
-        .error-description {
+        .error-shell p {
             color: var(--metal-mid);
-            max-width: 500px;
-            margin-bottom: 40px;
+            max-width: 32rem;
+            margin: 0 auto 32px;
+        }
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .error-legal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            justify-content: center;
+            margin-top: 16px;
+            font-size: 0.8rem;
+        }
+        .error-legal a {
+            color: var(--metal-dark);
+            text-decoration: none;
+        }
+        .error-legal a:hover {
+            color: var(--accent-blue);
+        }
+        @media (max-width: 640px) {
+            .error-actions {
+                flex-direction: column;
+                width: 100%;
+                max-width: 18rem;
+            }
         }
     </style>
 </head>
@@ -51,32 +86,39 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="https://raw.githubusercontent.com/markotuisk/logos/ce8bf7fa8baff3acc97aac35d8733f7c9122af1c/GOTX.png"
-                    alt="GOTX Managed IT" class="logo-image">
+                    alt="GOTX" class="logo-image">
             </a>
             <nav>
                 <ul>
                     <li><a href="index.html#services">Services</a></li>
                     <li><a href="index.html#solutions">Solutions</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container error-container">
+    <main class="container error-shell">
+        <p class="error-status">Status // 404</p>
         <div class="error-code">404</div>
-        <h1 class="error-message">Off the Grid?</h1>
-        <p class="error-description">
-            It looks like you've ventured off the secure path. The page you're looking for doesn't exist, has been
-            moved, or is currently under maintenance.
-        </p>
-        <a href="index.html" class="cta-button accent">Return to Safety</a>
-    </div>
+        <h1>This coordinate is empty</h1>
+        <p>The path you requested is not on gotx.uk. It was moved, retired, or never published.</p>
+        <div class="error-actions">
+            <a href="index.html" class="cta-button accent">Return home</a>
+            <a href="about.html" class="cta-button">About GOTX</a>
+        </div>
+    </main>
 
     <footer>
         <div class="container">
-            <div class="copyright" style="text-align: center; border-top: none;">
-                <p>&copy; 2026 GOTX Connect Ltd.</p>
+            <div class="copyright" style="text-align: center;">
+                <p>&copy; 2026 GOTX Connect Ltd. All rights reserved.</p>
+                <p class="error-legal">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="cookies.html">Cookies</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="legal.html">Legal</a>
+                </p>
             </div>
         </div>
     </footer>

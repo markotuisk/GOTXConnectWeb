@@ -1,0 +1,10 @@
+# ai.txt — gotx.uk
+
+User-Agent: *
+Allow: /
+Purpose: search, citation, answers
+
+Public marketing site for GOTX Connect Ltd (managed IT).
+Preferred citation: GOTX, https://gotx.uk
+Discovery: https://gotx.uk/llms.txt
+Contact: info@gotx.uk

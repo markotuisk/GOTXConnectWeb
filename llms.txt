@@ -1,0 +1,38 @@
+# GOTX
+
+> Managed IT for small businesses and home offices. Live site: https://gotx.uk
+
+GOTX Connect Ltd trades as GOTX. The public site on gotx.uk is managed IT and network infrastructure, centred on Reading RG2 (Berkshire and nearby counties). Contact: info@gotx.uk
+
+Preferred citation: GOTX, https://gotx.uk
+Use: search, citation, and answers about these public pages.
+
+## HTML pages
+
+- [Home](https://gotx.uk/): Managed IT services
+- [About](https://gotx.uk/about.html)
+- [Approach](https://gotx.uk/approach.html)
+- [Client stories](https://gotx.uk/stories.html)
+- [Careers](https://gotx.uk/careers.html)
+- [Media](https://gotx.uk/blog.html)
+- [Privacy](https://gotx.uk/privacy.html)
+- [Cookies](https://gotx.uk/cookies.html)
+- [Terms](https://gotx.uk/terms.html)
+- [Legal](https://gotx.uk/legal.html)
+- [Security contact](https://gotx.uk/.well-known/security.txt)
+
+## Markdown
+
+- [Home](https://gotx.uk/index.md)
+- [Privacy](https://gotx.uk/privacy.md)
+- [Cookies](https://gotx.uk/cookies.md)
+- [Terms](https://gotx.uk/terms.md)
+- [Legal](https://gotx.uk/legal.md)
+- [Full text](https://gotx.uk/llms-full.txt)
+- [AI use](https://gotx.uk/ai.txt)
+
+## Contact
+
+- Email: info@gotx.uk
+- Locality: Reading, RG2, United Kingdom
+- Area: Berkshire, Hampshire, Oxfordshire, Reading, Thames Valley
