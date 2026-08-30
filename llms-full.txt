@@ -8,7 +8,7 @@ GOTX provides fully managed IT for small businesses and home offices, with local
 
 Area served: Berkshire, Hampshire, Oxfordshire, Reading, Thames Valley. Contact: info@gotx.uk
 
-Google Analytics 4 is configured (G-PBKGR507D9) and loads only after cookie consent. Microsoft Clarity is not configured.
+Google tag GT-WRFXMCTV (Analytics destination G-PBKGR507D9) loads only after cookie consent. Microsoft Clarity is not configured.
 
 Pages: https://gotx.uk/ · /about.html · /approach.html · /stories.html · /careers.html · /blog.html
 Policies: /privacy.html · /cookies.html · /terms.html · /legal.html

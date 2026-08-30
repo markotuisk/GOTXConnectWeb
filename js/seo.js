@@ -2,9 +2,12 @@
     const seo = window.GOTX_SEO || {};
     const gsc = (seo.gsc || '').trim();
     const bing = (seo.bing || '').trim();
+    const googleTag = (seo.googleTag || '').trim();
     const ga4 = (seo.ga4 || '').trim();
     const clarity = (seo.clarity || '').trim();
     const indexNowKey = (seo.indexNowKey || '').trim();
+    // Prefer GT- container when set; G- is a destination of that tag.
+    const primaryTag = googleTag || ga4;
 
     function setMeta(name, content) {
         if (!content) return;
@@ -29,13 +32,13 @@
         fetch(ping, { method: 'GET', mode: 'no-cors', keepalive: true }).catch(function () {});
     }
 
-    if (!ga4 && !clarity) return;
+    if (!primaryTag && !clarity) return;
 
     const STORAGE_KEY = 'gotx-analytics-consent';
     const consent = localStorage.getItem(STORAGE_KEY);
 
-    function loadGa4() {
-        if (!ga4 || window.__gotxGaLoaded) return;
+    function loadGoogleTag() {
+        if (!primaryTag || window.__gotxGaLoaded) return;
         window.__gotxGaLoaded = true;
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -48,10 +51,11 @@
         });
         gtag('consent', 'update', { analytics_storage: 'granted' });
         gtag('js', new Date());
-        gtag('config', ga4, { anonymize_ip: true });
+        // Only configure the GT- tag when present — G-PBKGR507D9 is already its destination.
+        gtag('config', primaryTag);
         const script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ga4);
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(primaryTag);
         document.head.appendChild(script);
     }
 
@@ -69,7 +73,7 @@
     }
 
     function enableAnalytics() {
-        loadGa4();
+        loadGoogleTag();
         loadClarity();
     }
 
